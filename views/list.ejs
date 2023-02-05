@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1><%= kindOfDay%></h1>
+    </div>
+  <div class="box">
+        <li>buy food</li>
+        <li>cook food</li>
+        <li>eat food</li>
+      <% for(var i=0; i<newitem.length; i++){ %>
+        <div class="items"></div>
+        <p><%= newitem[i] %></p>
+     <%  } %>
+  </div>
+   
+   <form action="/" method="post">
+    <input type="text" name="newitem">
+    <button type="submit" name="button">Add</button>
+   </form>
+</body>
+</html>
